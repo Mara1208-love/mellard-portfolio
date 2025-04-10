@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d5e9f7, #e8dbf9, #d5e9f7);
+      background-size: 400% 400%;
+      animation: shinyBackground 15s ease infinite;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @keyframes shinyBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: linear-gradient(to right, #c9a9d8, #b58ecf);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      color: black;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .logo img {
+      position: relative;
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, #c9a9d8, #b58ecf);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      border: 2px solid white;
+    }
+
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: black;
+      transition: width 0.3s;
+      margin-top: 5px;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    .about-box {
+      background-color: rgba(213, 233, 247, 0.8);
+      border: 8px solid #b89ac6;
+      border-radius: 14px;
+      padding: 30px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .about-box h2 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .about-box p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-top: 15px;
+    }
+
+    .profile-pic {
+      border: 8px solid #6ea9dd;
+      border-radius: 14px;
+      padding: 8px;
+      background: #fff;
+      max-width: 280px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-pic img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: linear-gradient(to right, #b58ecf, #c9a9d8);
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+      color: black;
+      margin-top: auto;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <h1>PORTFOLIO</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="portfolio.html">My Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo">
+        <a href="home.html">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/659/090/non_2x/m-letter-logo-icon-for-business-and-company-vector.jpg" alt="Mellard Logo">
+        </a>
+    </div>
+</header>
+
+<section class="container">
+  <div class="about-box">
+    <h2>About Me</h2>
+    <p>
+      Hello! I am Mellard M. Mara, an Information Technology student at Our Lady of Fatima University (OLFU) Quezon City.
+      I am passionate about software development, problem-solving, and creating innovative technology solutions. 
+      With a strong foundation in C programming, I have developed skills in developing practical applications and analyzing problems
+      with a focus on efficiency.
+    </p>
+  </div>
+
+  <div class="profile-pic">
+    <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/475001020_1979031562573535_5657908073502061265_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeG1zg8B6IxwLMze0zltzMflEy0dPcBdAKITLR09wF0Aor9Cwfk1LcZd52caxAKNnap0fjOkdRaalRVl4eivd0Wg&_nc_ohc=KcnTmbTRd3IQ7kNvwFBbXG2&_nc_oc=Adl49PMMTdGij2_e9MTGJJ3V_jXHSA1BfnhR9oOILtMek1rq2p3wJuCMrFgK2kpsmiQ&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=tExQWNGHBv5S1Nfmm3ZWVA&oh=00_AfGKg54aWRQrcnytZ1anLUmSrqqtrZl2LEZeDvvNdHRTSw&oe=67FD4E49" alt="Profile Picture">
+  </div>
+
+  <div class="about-box">
+    <p>
+      I strive to continuously learn and grow in the ever-evolving tech industry. As I progress through my studies and
+      personal projects, I aim to contribute to the development of cutting-edge software solutions. My ambition is to work
+      with a team of like-minded individuals to create meaningful and impactful projects.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Mellard M. Mara. All rights reserved.
+</footer>
+
+</body>
+</html>

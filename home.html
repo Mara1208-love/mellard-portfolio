@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d5e9f7, #e8dbf9, #d5e9f7);
+      background-size: 400% 400%;
+      animation: shinyBackground 15s ease infinite;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @keyframes shinyBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: linear-gradient(to right, #c9a9d8, #b58ecf);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      color: black;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      position: relative;
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, #c9a9d8, #b58ecf);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      border: 2px solid white;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: black;
+      transition: width 0.3s;
+      margin-top: 5px;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 60px 20px 40px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    .presentation {
+      background-color: rgba(213, 233, 247, 0.7);
+      border: 8px solid #b89ac6;
+      border-radius: 14px;
+      padding: 30px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease;
+    }
+
+    .presentation:hover {
+      transform: scale(1.05);
+    }
+
+    .presentation p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .interest-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .interest-button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+
+    .profile-pic {
+      border: 8px solid #6ea9dd;
+      border-radius: 14px;
+      padding: 8px;
+      background: #fff;
+      max-width: 280px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-pic img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .social-sidebar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .social-sidebar a img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: white;
+      padding: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .social-sidebar a img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      background: linear-gradient(to right, #b58ecf, #c9a9d8);
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+      color: black;
+      margin-top: auto;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PORTFOLIO</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="portfolio.html">My Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo">
+      <a href="home.html">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/659/090/non_2x/m-letter-logo-icon-for-business-and-company-vector.jpg" alt="Mellard Logo">
+      </a>
+    </div>
+  </header>
+  
+
+<section id="home" class="container">
+  <div class="presentation">
+    <p>
+      Welcome to my portfolio. My name is Mellard M. Mara, and I am dedicated to software development, graphic design, and more.
+      I have developed a strong foundation in C programming, creative design, and I am passionate about delivering
+      high-quality work through continuous learning and attention to detail.
+    </p>
+  </div>
+
+  <div class="profile-pic">
+    <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/475001020_1979031562573535_5657908073502061265_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeG1zg8B6IxwLMze0zltzMflEy0dPcBdAKITLR09wF0Aor9Cwfk1LcZd52caxAKNnap0fjOkdRaalRVl4eivd0Wg&_nc_ohc=KcnTmbTRd3IQ7kNvwFBbXG2&_nc_oc=Adl49PMMTdGij2_e9MTGJJ3V_jXHSA1BfnhR9oOILtMek1rq2p3wJuCMrFgK2kpsmiQ&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=tExQWNGHBv5S1Nfmm3ZWVA&oh=00_AfGKg54aWRQrcnytZ1anLUmSrqqtrZl2LEZeDvvNdHRTSw&oe=67FD4E49" alt="Profile Picture">
+  </div>
+</section>
+
+<div class="presentation">
+  <h2>Welcome!</h2>
+  <p>This is the introduction box. Feel free to read about me!</p>
+
+  <a href="about.html" class="interest-button">Are you interested with me?</a>
+</div>
+
+<div class="social-sidebar">
+  <a href="https://www.facebook.com/mellard.mara" target="_blank">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtfbcYeYgf0wQJ-LSPm3CPbyB7T1p0f5bnaA&s" alt="Facebook">
+  </a>
+  <a href="https://www.instagram.com/hakone024/" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Instagram">
+  </a>
+  <a href="https://www.tiktok.com/@enishi90" target="_blank">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxd8BJfOc4eOKal6Gis7lFMl9kGd1-OsqhlA&s" alt="TikTok">
+  </a>
+</div>
+
+<footer>
+  © 2025 Mellard M. Mara. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Projects</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d5e9f7, #e8dbf9, #d5e9f7);
+      background-size: 400% 400%;
+      animation: shinyBackground 15s ease infinite;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @keyframes shinyBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: linear-gradient(to right, #c9a9d8, #b58ecf);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      color: black;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      position: relative;
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, #c9a9d8, #b58ecf);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      border: 2px solid white;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: black;
+      transition: width 0.3s;
+      margin-top: 5px;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .profile-pic {
+      border: 8px solid #6ea9dd;
+      border-radius: 50%;
+      padding: 8px;
+      background: #fff;
+      max-width: 200px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-pic img {
+      width: 100%;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .profile-description {
+      max-width: 600px;
+      background-color: rgba(213, 233, 247, 0.8);
+      border: 8px solid #b89ac6;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .projects-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+
+    .project-box {
+      background-color: rgba(213, 233, 247, 0.8);
+      border: 8px solid #b89ac6;
+      border-radius: 14px;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-box h3 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .project-box p {
+      font-size: 16px;
+      margin: 15px 0;
+    }
+
+    .project-box a {
+      text-decoration: none;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .project-box a:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      background: linear-gradient(to right, #b58ecf, #c9a9d8);
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+      color: black;
+      margin-top: auto;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <h1>PORTFOLIO</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="portfolio.html">My Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo">
+        <a href="home.html">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/659/090/non_2x/m-letter-logo-icon-for-business-and-company-vector.jpg" alt="Mellard Logo">
+        </a>
+    </div>
+</header>
+
+<section class="container">
+  <div class="profile-section">
+    <a href="https://www.linkedin.com/in/mellardmara" target="_blank" class="profile-pic">
+      <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/475001020_1979031562573535_5657908073502061265_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeG1zg8B6IxwLMze0zltzMflEy0dPcBdAKITLR09wF0Aor9Cwfk1LcZd52caxAKNnap0fjOkdRaalRVl4eivd0Wg&_nc_ohc=KcnTmbTRd3IQ7kNvwFBbXG2&_nc_oc=Adl49PMMTdGij2_e9MTGJJ3V_jXHSA1BfnhR9oOILtMek1rq2p3wJuCMrFgK2kpsmiQ&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=tExQWNGHBv5S1Nfmm3ZWVA&oh=00_AfGKg54aWRQrcnytZ1anLUmSrqqtrZl2LEZeDvvNdHRTSw&oe=67FD4E49" alt="Profile Picture">
+    </a>
+    <div class="profile-description">
+      <p>
+        I am Mellard M. Mara, an IT student at OLFU Quezon City. I am passionate about programming, software development,
+        and the tech industry. I am eager to learn new technologies and contribute to impactful projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section">
+    <div class="project-box">
+        <h3>Project 1: My Portfolio</h3>
+        <p>Welcome to the Projects section of my portfolio! Here, you'll find a collection of the work 
+           I've done—from software development and graphic design to personal and academic projects. 
+           Each project reflects my growth, creativity, and commitment to delivering high-quality results.</p>
+        <a href="https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/489562527_1077691217524837_7274052788775052509_n.png?stp=dst-png_s720x720&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGn0juwOFA-Yd4dv4Pc8D9CuEV29Q8SpXu4RXb1DxKle84IVjMZjORbpajYG9stu3UceWmvaqsJ6RDQ5GVzmhaM&_nc_ohc=PbaIBULYT7sQ7kNvwF_w3rA&_nc_oc=AdnLpUQeHmiOZgBzyROGNiSqTVC0dLHSw4nthjKUSjznYYQGQZuliG9IIEveMVULeCk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&oh=03_Q7cD2AHHHcZSpCQT5J40rQ8s9NhZ1t34QZUUhJic6v1rH-S4UQ&oe=681F3C11" target="_blank">View Project</a>
+    </div>
+      
+
+  <div class="project-box">
+    <h3>Project 2: Group Activities</h3>
+    <p>This project is a Product Gallery website designed to showcase various consumer products, particularly home appliances. It features a clean, user-friendly interface with a prominent navigation bar, organized sections, and visually appealing product displays.
+        To demonstrate basic web design and layout structuring using HTML and CSS. This hands-on project enhanced my understanding of responsive design, section styling, and image formatting.
+    </p>
+    <a href="https://scontent.fmnl3-2.fna.fbcdn.net/v/t1.15752-9/488523462_1200148534840717_2751559526227322564_n.png?stp=dst-png_s843x403&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEb1m_U4-sr3zI4V1A4cnbSjsK0sg7c3waOwrSyDtzfBoFC0aKPT8djwDJwh8lzYkvNH1Sh4WDv0HflgPT-vwj-&_nc_ohc=_Uc_dHAJyNsQ7kNvwHsWy6I&_nc_oc=AdlmQoADE3xejMY2fVAfGQDgNTPmFr8NQ3O86k3tRgwDmkEkmSwaHTCQaHzulGzX_TQ&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&oh=03_Q7cD2AE1lrLNdc8j6rOAUw0sxsn06dkEp9TO-PBCZhHF16Qe0Q&oe=681F5BCE" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-box">
+    <h3>Project 3: Wireframe</h3>
+    <p>This wireframe represents the conceptual layout for an e-commerce platform focused on product browsing and categorization. It was designed to visualize user interface structure before actual development using HTML and CSS.</p>
+    <a href="https://scontent.fmnl37-2.fna.fbcdn.net/v/t1.15752-9/489448197_1389280352244759_7235618722686031371_n.png?stp=dst-png_s640x640&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeF6RGUiR-cEQ_PHlWgJ8jsuaBLeFLe6dqdoEt4Ut7p2pxtEiNseaQTKmg46ouEOb3gjD6da7rfaCK5kNtBqeV_m&_nc_ohc=I14II47YggIQ7kNvwHRm8gr&_nc_oc=AdmYEYcazqCKKPUds1_raX81wNmBB0qJ0FMKmGu8TsMogzvvhmi0Eoju1fsMNrZoN2Y&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&oh=03_Q7cD2AElDSRKDZOufcnQks4dpJ1ljjCpy-nz3-fPWIWeXVpyCw&oe=681F457B" target="_blank">View Project</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Mellard M. Mara. All rights reserved.
+</footer>
+
+</body>
+</html>
